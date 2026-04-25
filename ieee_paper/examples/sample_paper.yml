@@ -1,0 +1,66 @@
+title: "A Collaborative-Filtering Scholarship Recommendation System"
+
+authors:
+  - name: "Kshitij Garg"
+    dept: "Dept. of Computer Science"
+    org: "Example University"
+    city: "Bangalore"
+    country: "India"
+    email: "kshitijvgarg@gmail.com"
+  - name: "Co-author Two"
+    dept: "Dept. of Computer Science"
+    org: "Example University"
+    city: "Bangalore"
+    country: "India"
+    email: "coauthor2@example.com"
+
+abstract: |
+  Access to scholarships remains fragmented across portals, and students
+  often miss opportunities that match their profile. This paper presents a
+  recommendation system that matches student profiles against a curated
+  scholarship database using collaborative filtering and content-based
+  signals. We describe the dataset, model, and preliminary results, and
+  discuss limitations and future extensions.
+
+keywords:
+  - scholarship
+  - recommendation system
+  - collaborative filtering
+  - education
+
+sections:
+  - heading: "Introduction"
+    body: "sample_intro.md"
+  - heading: "Methodology"
+    body: |
+      We combine a user-item interaction matrix with content features
+      extracted from scholarship eligibility text. The pipeline is trained
+      on a sample of public scholarship listings stored in a local SQLite
+      database.
+    subsections:
+      - heading: "Dataset"
+        body: |
+          The scholarship corpus contains anonymised listings with fields
+          for domain, eligibility, deadline, and award amount. Student
+          profiles contain demographic and academic attributes.
+      - heading: "Model"
+        body: |
+          We use matrix factorisation with an auxiliary content tower
+          that embeds eligibility text via a small transformer.
+  - heading: "Results"
+    body: |
+      Preliminary results on a held-out test split show an improvement
+      over a popularity-only baseline.
+  - heading: "Conclusion"
+    body: |
+      The system shows promise as a first-line tool for matching students
+      to relevant scholarships. Future work will expand the dataset and
+      evaluate long-term engagement.
+
+references:
+  # The `references` style auto-generates [1], [2], ... so DO NOT include
+  # "[N] " prefixes in the strings below — the builder strips them defensively
+  # but writing them cleanly avoids confusion.
+  - "A. Example, \"Matrix factorisation for recommender systems,\" IEEE Trans. on Recommenders, vol. 1, no. 1, pp. 1-10, 2024."
+  - "B. Author, \"Content-based recommendation revisited,\" in Proc. of ACM RecSys, 2023, pp. 100-110."
+  - "C. Writer, \"A dataset of scholarships for research,\" Data in Brief, vol. 42, p. 100001, 2022."

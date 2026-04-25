@@ -1,0 +1,23 @@
+# Build outputs (generated PDFs, DOCX, TeX, LaTeX aux files)
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# macOS
+.DS_Store
+
+# MS Word lock files (created while a doc is open)
+~$*
+
+# LaTeX build artifacts (in case pdflatex is ever run outside build/)
+*.aux
+*.log
+*.synctex.gz
+*.out
+*.toc
+
+# Auto-generated cache of the strict→transitional template (recreated on demand)
+templates/docx/*.transitional.docx
